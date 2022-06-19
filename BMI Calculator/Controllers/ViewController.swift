@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         print(height)
         print(weight)
         print( Float(weight * 703) / Float(pow(height,2)))
+        let bmi = Float(weight * 703) / Float(pow(height,2))
+        let VCHedgeFund = secondViewController()
+        VCHedgeFund.bmiValue = String(format: "%.1f", bmi)
+        self.present(VCHedgeFund, animated: true, completion:nil)
     }
     
 }
